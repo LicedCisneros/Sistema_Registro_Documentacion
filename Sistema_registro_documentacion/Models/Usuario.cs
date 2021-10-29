@@ -48,12 +48,14 @@ namespace Sistema_registro_documentacion.Models
 
         [PersonalData]
         [Required(ErrorMessage = "El usuario es obligatorio")]
+        [StringLength(40, ErrorMessage = "{0} debe tener {2}caracteres minimo", MinimumLength = 10)]        
         [DataType(DataType.Text)]
         [Display(Name = "Usuario")]
         public string usuario { get; set; }
 
         [PersonalData]
         [Required(ErrorMessage = "El password es obligatorio")]
+        [StringLength(30, ErrorMessage = "{0} debe tener {2}caracteres minimo y {1} caracteres maximo.", MinimumLength = 8)]        
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string password { get; set; }
