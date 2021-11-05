@@ -12,36 +12,47 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
-            <div class="form-group">
-                <label asp-for="nombre" class="control-label"></label>
-                <input asp-for="nombre" class="form-control" />
-                <span asp-validation-for="nombre" class="text-danger"></span>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="nombre" class="control-label"></label>
+                        <input asp-for="nombre" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="nombre" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="apppaterno" class="control-label"></label>
+                        <input asp-for="apppaterno" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="apppaterno" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="appmaterno" class="control-label"></label>
+                        <input asp-for="appmaterno" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="appmaterno" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="apppaterno" class="control-label"></label>
-                <input asp-for="apppaterno" class="form-control" />
-                <span asp-validation-for="apppaterno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="appmaterno" class="control-label"></label>
-                <input asp-for="appmaterno" class="form-control" />
-                <span asp-validation-for="appmaterno" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="telefono" class="control-label"></label>
-                <input asp-for="telefono" class="form-control" />
-                <span asp-validation-for="telefono" class="text-danger"></span>
-            </div>
-           <div class="col-sm-6">
-                    <label asp-for="estado" class="control-label"><b>Tipo de informe</b></label>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="telefono" class="control-label"></label>
+                        <input asp-for="telefono" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="telefono" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label asp-for="estado" class="control-label"><b>Estado</b></label>
                     <select asp-for="estado" class="form-control" style="border-bottom-color: black; border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none; ">
                         <option>Activo</option>
                         <option>Inactivo</option>
                     </select>
                     <span asp-validation-for="estado" class="text-danger"></span>
                 </div>
-            <div class="col-sm-6">
-                    <label asp-for="rol" class="control-label"><b>Tipo de informe</b></label>
+                <div class="col-sm-4">
+                    <label asp-for="rol" class="control-label"><b>Rol:</b></label>
                     <select asp-for="rol" class="form-control" style="border-bottom-color: black; border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none; ">
                         <option>Administrador</option>
                         <option>Editor</option>
@@ -49,15 +60,22 @@
                     </select>
                     <span asp-validation-for="rol" class="text-danger"></span>
                 </div>
-            <div class="form-group">
-                <label asp-for="usuario" class="control-label"></label>
-                <input asp-for="usuario" class="form-control" />
-                <span asp-validation-for="usuario" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="password" class="control-label"></label>
-                <input asp-for="password" class="form-control" />
-                <span asp-validation-for="password" class="text-danger"></span>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="usuario" class="control-label"></label>
+                        <input asp-for="usuario" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="usuario" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="password" class="control-label"></label>
+                        <input asp-for="password" class="form-control" style="border-color: rgb(0 0 0); box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(128, 128, 128,0.6); outline: 0 none;" />
+                        <span asp-validation-for="password" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
